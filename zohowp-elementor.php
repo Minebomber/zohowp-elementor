@@ -10,5 +10,7 @@ Text Domain: zohowp-elementor
 define('ZOHOWP_ELEMENTOR_DIR_PATH', plugin_dir_path(__FILE__));
 define('ZOHOWP_ELEMENTOR_VERSION', '1.0.0');
 
-require_once ZOHOWP_ELEMENTOR_DIR_PATH . '/includes/class-plugin.php';
-\ZohoWP\Elementor\Plugin::instance();
+if (defined('ZOHOWP_DIR_PATH')) {
+	require_once ZOHOWP_ELEMENTOR_DIR_PATH . '/includes/class-plugin.php';
+	\ZohoWP\Elementor\Plugin::instance();
+}
